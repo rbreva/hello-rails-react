@@ -1,11 +1,21 @@
+import "./controllers"
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-function App() {
-  return (<h1>Hello Mauricio!</h1>);
-}
+import { Provider } from 'react-redux';
+import { store } from './redux/configureStore';
+import { getGreeting } from './redux/greeting/greeting';
+
+import App from './App'
+
+store.dispatch(getGreeting());
 
 ReactDOM.render(
-  <App/>,
-  document.getElementById('root'),
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
 );

@@ -4,10 +4,15 @@ class MessagesController < ApplicationController
   # GET /messages or /messages.json
   def index
     @messages = Message.all
+
+    render json: @messages, only: [:msg]
   end
 
   # GET /messages/1 or /messages/1.json
   def show
+    @message = Message.find(params[:id])
+
+    render json: @message, only: [:msg]
   end
 
   # GET /messages/new
