@@ -2,19 +2,19 @@ Message.destroy_all
 
 Message.create!([
   {
-    msg: "Primer Mensaje"
+    msg: "¡Hola Mundo!"
   },
   {
-    msg: "Segundo Mensaje"
+    msg: "Hello World!"
   },
   {
-    msg: "Tercer Mensaje"
+    msg: "Hallo Welt!"
   },
   {
-    msg: "Cuarto Mensaje"
+    msg: "Pozdrav svijete!"
   },
   {
-    msg: "Quinto Mensaje"
+    msg: "Olá mundo!"
   }
 ])
 
